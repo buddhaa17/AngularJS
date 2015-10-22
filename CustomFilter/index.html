@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title></title>
+	<script src="lib/angular.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controllers.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"></link>
+</head>
+<body ng-app="myApp">
+
+<span> Welcome to the beer shopee <span><br/><br/>
+	<div ng-controller="customFilterController">
+		Min Price:<input ng-model="min" class="input-xxlarge" type="text" class="input-mini" ></input>
+		Max Price<input ng-model="max"  type="text" class="input-mini" ></input>	
+		<br/><br/><br/>
+
+
+<table class="table table-bordered">
+	<tr>
+		<td>Beer Name</td>
+		<td>Price</td>
+	</tr>
+	<tr ng-repeat="product in products | PriceRange:min:max">
+		<td>{{product.Name}}</td>
+		<td>{{product.Price}}</td>			
+	</tr>
+</table>
+</div>
+</body>
+</html>
