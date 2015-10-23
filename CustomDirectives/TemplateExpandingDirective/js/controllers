@@ -1,0 +1,15 @@
+var app = angular.module('directiveModule',[]);
+
+app.controller('directiveController',['$scope', function($scope){
+	
+	$scope.firstName = "buddha";
+	$scope.lastName = "kamble";
+
+}]);
+
+app.directive('myCustomerdirective', function()
+{
+	return {
+		template:' First Name is: {{firstName}} and Last name is {{lastName}}'
+	}
+});
