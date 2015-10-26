@@ -3,22 +3,30 @@
 	<title>Angular Hello World!</title>
 
 	<script type="text/javascript" src="lib/angular.js"></script>	
-
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular-route.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript" src="js/controllers.js"></script>
+
 </head>
 <body ng-app="myApp">
 
 <span>Welcome to AngularJS</span><br/>
-<a href="Inheritance.html">Adding behaviour to the scope</a><br/>
-<span>Scope Inheritance Example</span>
 
-<span>Example3</span>
-	<div ng-controller='testController'>
-		<span>{{title}}</span></br>
-		<input ng-model='number'/>
-		<span>Double of Given input is {{double(number)}} </span>
-	</div>
+<li>
+	<a href="#/home">Example 3</a>
+</li>
+
+<li>
+	<a href="#/inheritance">Adding behaviour to the scope</a>
+</li>
+
+<div style="border-style: solid;">
+<div ng-view></div>
+</div>
+
+
+
+
 
 </body>
 </html>
