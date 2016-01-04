@@ -1,4 +1,5 @@
-var customFilter = angular.module('customFilter',[]);
+(function(){
+	var customFilter = angular.module('customFilter',[]);
 
 customFilter.controller('customFilterController',['$scope', function($scope){
 
@@ -15,3 +16,5 @@ customFilter.controller('customFilterController',['$scope', function($scope){
 						  $scope.max=270;
 
 }]);
+
+})();
